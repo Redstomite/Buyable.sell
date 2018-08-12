@@ -4,7 +4,12 @@
 		<title>Products</title>
 	</head>
 	<body>
-		<p>Welcome to Buyable.sell, {{username}}</p>
+		<form action="/search" method = "GET">
+			<input type = "search" name = "search" placholder = "search for items">
+			<input type="submit" value="Search">
+		</form>
+		{{products}}
+<!--		<p>Welcome to the products page.</p>
 		<li>
 			Smartphones
 		</li>
@@ -17,5 +22,7 @@
 		<li>
 			Chargers
 		</li>
+		<a href="/logout">Click here to log out.</a> 
+								-->
 	<body>
 </html>

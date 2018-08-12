@@ -7,12 +7,19 @@
 	</head>
 <body>
 	Welcome to Buyable.sell, the online flea market!
-
+{% if login == 'False' %}
 	<form action="/login" method="POST">
   		<input type="username" name="username" placeholder="Username">
   		<input type="password" name="password" placeholder="Password">
  		<input type="submit" value="Log in">
 	</form>
+{% else %}
 
+<p>Here is a list of pages you can go to, {{ session["username"]}}
+<a href="/products">Products</a>
+</p>
+<a href="/logout">Click here to log out.</a>
+
+{% endif %}
 </body>
 </html>
