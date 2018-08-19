@@ -13,13 +13,15 @@
   		<input type="password" name="password" placeholder="Password">
  		<input type="submit" value="Log in">
 	</form>
+	<a href="/signup">Click here to sign up</a>
 {% else %}
 
-<p>Here is a list of pages you can go to, {{ session["username"]}}
+<p>Here is a list of pages you can go to:</p>
 <a href="/products">Products</a>
-</p>
 <a href="/logout">Click here to log out.</a>
-
+{% if vendor == 'True'%}
+<a href="/addproduct">Click here to add a product</a>
+{% endif %}
 {% endif %}
 </body>
 </html>
